@@ -15,7 +15,9 @@ class CategoryForm
                 TextInput::make('name')
                 ->required(),
                 TextInput::make('slug')
-                ->required(),
+                ->required()
+                ->unique(ignoreRecord: true) // Menambahkan validasi slug harus unik,
+                ->maxLength(255), // Menambahkan validasi maksimal 255 karakter
             ]);
     }
 }

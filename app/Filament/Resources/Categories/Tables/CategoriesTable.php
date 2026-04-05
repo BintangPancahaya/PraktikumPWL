@@ -24,7 +24,7 @@ class CategoriesTable
             ->recordActions([
                 EditAction::make(),
             ])
-            ->toolbarActions([
+            ->toolbarActions([  
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
